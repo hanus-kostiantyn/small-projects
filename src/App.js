@@ -2,6 +2,14 @@ import Accordian from './components/accordian';
 import './App.css';
 import RandomColor from './components/random-color';
 import StarRating from './components/star-rating';
+import ImageSlider from './components/4-image-slider';
+import TreeView from './components/5-tree-view';
+import menus from './components/5-tree-view/data'
+import QrCodeGenerator from './components/qr-code-generator';
+import LightDarkMode from './components/8-light-dark-mode';
+import LoadMoreData from './components/7-load-more-data'
+import CopyPreDefault from './components/9-copyof8'
+import ScrollIndicator from './components/9-scroll-indicator';
 
 function App() {
   return (
@@ -11,7 +19,21 @@ function App() {
 
         {/* <RandomColor/> */}
 
-        <StarRating noOfStars={10}/>
+        {/* <StarRating noOfStars={10}/> */}
+
+        {/* <ImageSlider url={'https://picsum.photos/v2/list'} page={1} limit={10}/> */}
+
+        {/* <TreeView menus={menus}/> */}
+
+        {/* <QrCodeGenerator/> */}
+        {/* <LightDarkMode/> */}
+
+        {/* <LoadMoreData/> */}
+
+        {/* <CopyPreDefault/> */}
+
+        <ScrollIndicator url={'https://dummyjson.com/products?limit=100'}/>
+
     </div>
   );
 }
