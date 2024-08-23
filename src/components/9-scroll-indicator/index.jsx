@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './scroll.css'
 
 export default function ScrollIndicator({url}) {
 
@@ -12,8 +13,6 @@ export default function ScrollIndicator({url}) {
             setLoading(true);
             const response = await fetch(getUrl);
             const data = await response.json();
-
-            console.log(data);
 
             if (data && data.products && data.products.length > 0) {
                 setData(data.products);
@@ -33,12 +32,12 @@ export default function ScrollIndicator({url}) {
     }, [url])
 
     function handleScrollPercentage() {
-        console.log(
-            document.body.scrollTop,
-            document.documentElement.scrollTop,
-            document.documentElement.scrollHeight, 
-            document.documentElement.clientHeight
-        )
+        // console.log(
+        //     document.body.scrollTop,
+        //     document.documentElement.scrollTop,
+        //     document.documentElement.scrollHeight, 
+        //     document.documentElement.clientHeight
+        // )
 
         const howMuchScrolled = document.body.scrollTop || document.documentElement.scrollTop;
 
@@ -55,15 +54,26 @@ export default function ScrollIndicator({url}) {
         }
     }, [])
 
-    console.log(data, scrollPercentage);
+
+    if (errorMessage) {
+        return <div>Error, {errorMessage}</div>
+    }
+
+    if (loading) {
+        return <div>Loading...</div>
+    }
 
     return <div>
-        <h1>Custom Scroll Indicator</h1>
-        <div className="scroll-progress-tracking-container">
+        <div className="top-container">
+            <h1>Custom Scroll Indicator</h1>
+            <div className="scroll-progress-tracking-container">
 
-            <div className='current-progress-bar'></div>
+            <div className='current-progress-bar'
+            style={{width: `${scrollPercentage}%`}}></div>
 
+            </div>
         </div>
+        
 
 
         <div className="data-container">
