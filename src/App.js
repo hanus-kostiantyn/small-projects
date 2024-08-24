@@ -11,6 +11,7 @@ import LoadMoreData from './components/7-load-more-data'
 import CopyPreDefault from './components/9-copyof8'
 import ScrollIndicator from './components/9-scroll-indicator';
 import TabTest from './components/10-custom-tabs/tab-test';
+import ModalTest from './components/11-custom-modal-popup/modal-test';
 
 function App() {
   return (
@@ -35,7 +36,9 @@ function App() {
 
         {/* <ScrollIndicator url={'https://dummyjson.com/products?limit=100'}/> */}
 
-           <TabTest/> 
+        {/* <TabTest/>  */}
+
+        <ModalTest/>
 
     </div>
   );
