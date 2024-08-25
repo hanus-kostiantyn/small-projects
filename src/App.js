@@ -12,6 +12,7 @@ import CopyPreDefault from './components/9-copyof8'
 import ScrollIndicator from './components/9-scroll-indicator';
 import TabTest from './components/10-custom-tabs/tab-test';
 import ModalTest from './components/11-custom-modal-popup/modal-test';
+import GitHubProfileFinder from './components/12-github-profile-finder';
 
 function App() {
   return (
@@ -38,7 +39,9 @@ function App() {
 
         {/* <TabTest/>  */}
 
-        <ModalTest/>
+        {/* <ModalTest/> */}
+
+        <GitHubProfileFinder/>
 
     </div>
   );
