@@ -17,6 +17,7 @@ import TicTacToe from './components/14-tic-tac-toe';
 import RandomColor from './components/15-random-color';
 import FeatureFlagGlobalState from './components/16-feature-flag/context';
 import FeatureFlags from './components/16-feature-flag';
+import UseFetchHookTest from './components/17-use-fetch/test';
 
 function App() {
   return (
@@ -51,9 +52,12 @@ function App() {
 
         {/* <TicTacToe/> */}
 
-        <FeatureFlagGlobalState>
+        {/* <FeatureFlagGlobalState>
             <FeatureFlags/>
-        </FeatureFlagGlobalState>
+        </FeatureFlagGlobalState> */}
+
+        {/* useFetch - Custom Hook */}
+        <UseFetchHookTest/>
     </div>
   );
 }
