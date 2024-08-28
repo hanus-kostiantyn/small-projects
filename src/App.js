@@ -18,6 +18,7 @@ import RandomColor from './components/15-random-color';
 import FeatureFlagGlobalState from './components/16-feature-flag/context';
 import FeatureFlags from './components/16-feature-flag';
 import UseFetchHookTest from './components/17-use-fetch/test';
+import UseOnClickOutsideTest from './components/18-use-outside-click/test';
 
 function App() {
   return (
@@ -56,8 +57,11 @@ function App() {
             <FeatureFlags/>
         </FeatureFlagGlobalState> */}
 
-        {/* useFetch - Custom Hook */}
-        <UseFetchHookTest/>
+        {/* UseFetch - Custom Hook */}
+        {/* <UseFetchHookTest/> */}
+
+        {/* Use OnClick Outside Hook */}
+        <UseOnClickOutsideTest/>
     </div>
   );
 }
